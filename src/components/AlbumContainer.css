@@ -1,0 +1,9 @@
+.AlbumContainer{
+  max-width: 1280px;
+  width: 79%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+}
