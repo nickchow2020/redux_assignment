@@ -10,3 +10,11 @@ export function fetchDataFromAPI(name) {
     dispatch(setInitState(data))
   };
 }
+
+export const getDefaultDisplay = (payload)=>{
+  return {type:"GET_INIT",payload}
+}
+
+export const AddOnDisplay = (payload)=>{
+  return {type:"ADD_ON",payload}
+}
