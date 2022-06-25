@@ -4,6 +4,20 @@
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   padding: .5rem 1rem;
+}
+
+.AlbumResultSection{
+  max-width: 1280px;
+  width: 79%;
+  margin: auto;
+}
+
+.displayBody{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

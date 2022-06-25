@@ -1,6 +1,7 @@
 const ININ_STATE ={
   resultCount:0,
-  results:[]
+  results:[],
+  loading: true
 }
 
 const albumReducer = (state=ININ_STATE,action)=>{
@@ -9,6 +10,10 @@ const albumReducer = (state=ININ_STATE,action)=>{
       return {...state,...action.payload}
     case "ADD_ON":
       return {...state,...action.payload}
+    case "START_LOADING":
+      return {...state,loading:true}
+    case "END_LOADING":
+      return {...state,loading:false}
     default:
       return state
   }

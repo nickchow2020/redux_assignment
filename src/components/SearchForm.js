@@ -1,22 +1,24 @@
 import { Button, Form, Input } from 'antd';
 import {useDispatch} from 'react-redux';
-import {fetchDataFromAPI} from "../redux/actionCreator";
+import {fetchDataFromAPI,showDisplay} from "../redux/actionCreator";
 import "./SearchForm.css"
 
 const SearchForm = () => {
-
   const dispatch = useDispatch()
 
   const onFinish = (values) => {
     const value = values.search_value
     dispatch(fetchDataFromAPI(value))
+    dispatch(showDisplay())
   };
 
 
 
 
   return (
-    <Form onFinish={onFinish} className="SearchForm">
+    <Form 
+    onFinish={onFinish} 
+    className="SearchForm">
       <div className='inputWrap'>
         <Form.Item className='searchInput'
         name="search_value"

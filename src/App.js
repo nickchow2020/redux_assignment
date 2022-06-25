@@ -3,16 +3,20 @@ import "./App.css"
 import SearchForm from './components/SearchForm';
 import Line from './components/Line';
 import AlbumContainer from "./components/AlbumContainer";
-import AddOnBtn from './components/AddOnBtn';
+import {useSelector} from "react-redux"
 
 function App() {
+
+  const show = useSelector(data => data.init.show)
+
   return (
     <div className="App">
       <header className="App-header">
         <SearchForm />
         <Line />
-        <AlbumContainer />
-        <AddOnBtn />
+        {
+          show ? <AlbumContainer /> : null
+        }
       </header>
     </div>
   );
